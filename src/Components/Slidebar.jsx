@@ -3,9 +3,9 @@ function Slidebar() {
     <>
       <div className="my-[60px]">
         <img
-          src="/download.png"
+          src="/download.jpg"
           alt="Rotating Image"
-          className="w-[100%] h-[400px]"
+          className="w-[100%]  "
           id="rotating-image"
         />
       </div>

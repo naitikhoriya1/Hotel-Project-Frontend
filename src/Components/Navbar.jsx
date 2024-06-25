@@ -34,7 +34,7 @@ function Navbar() {
                 onClick={() => handleNavigate("bookingform")}
                 className="text-white"
               >
-                Booking Form
+                Add Your Hotel
               </button>
               <button
                 onClick={() => handleNavigate("bookingdata")}
@@ -52,7 +52,7 @@ function Navbar() {
                 Signup
               </Link>
               <Link to="http://localhost:5173/signin" className="text-white">
-                Signin
+                Login
               </Link>
             </div>
           )}
