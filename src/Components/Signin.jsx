@@ -4,8 +4,9 @@ import Navbar from "./Navbar";
 import Fotter from "./Fotter";
 
 function Signin() {
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({ email: "", password: "" });
   const navigate = useNavigate();
+  const [error, setError] = useState("");
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((previousData) => ({
@@ -13,21 +14,33 @@ function Signin() {
       [name]: value,
     }));
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     // console.log(formData);
     //api
-    const response = await fetch("http://localhost:8000/signin", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-    const jsonData = await response.json();
-    localStorage.setItem("user", JSON.stringify(jsonData.data));
-    // alert(jsonData.message);
-    navigate("/");
+    try {
+      const response = await fetch("http://localhost:8000/signin", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      const jsonData = await response.json();
+      if (response.status === 200) {
+        localStorage.setItem("user", JSON.stringify(jsonData.data));
+        // alert(jsonData.message);
+        alert("Login successful!");
+        navigate("/");
+      } else {
+        setError(jsonData.message);
+        alert("Login failed!");
+      }
+    } catch (error) {
+      setError("An error occurred");
+      alert("Login failed!");
+    }
   };
   return (
     <>
