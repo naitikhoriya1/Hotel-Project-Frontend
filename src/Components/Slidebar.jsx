@@ -1,13 +1,15 @@
+import React from "react";
+import "../App.css";
 function Slidebar() {
   return (
     <>
-      <div className="my-[60px]">
-        <img
-          src="/download.jpg"
-          alt="Rotating Image"
-          className="w-[100%]  "
-          id="rotating-image"
-        />
+      <div className="homepage">
+        <div className="image-container">
+          <img src="download.jpg" alt="Hotel" className="background-image" />
+          <div className="text-overlay">
+            <h1>Discover Your Perfect Stay Book with Confidence and Ease</h1>
+          </div>
+        </div>
       </div>
     </>
   );

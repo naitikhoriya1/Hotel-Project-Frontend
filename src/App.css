@@ -1,0 +1,33 @@
+.image-container {
+  position: relative;
+  text-align: center;
+  color: rgb(247, 220, 220);
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); Optional: Add a background for better text readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.text-overlay h1 {
+  font-size: 2.6em;
+  font-weight: bold;
+  text-shadow: 4px; /* Adjust size as needed */
+  margin: 0;
+}
