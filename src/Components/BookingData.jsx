@@ -13,7 +13,7 @@ export default function BookingData() {
   useEffect(() => {
     const fetchData = async () => {
       // console.log(formData);
-      const response = await fetch("https://hotel-project-backend.vercel.app//bookingdata");
+      const response = await fetch("https://hotel-project-backend.vercel.app/bookingdata");
       const jsonresponse = await response.json();
       // console.log(jsonresponse);
       setFormData(jsonresponse);
@@ -23,7 +23,7 @@ export default function BookingData() {
   const handleDelete = async (id) => {
     // console.log("hello",id)
     const response = await fetch(
-      `http://localhost:8000/bookingdatadelete/${id}`,
+      `https://hotel-project-backend.vercel.app/bookingdatadelete/${id}`,
       {
         method: "delete",
         headers: {
