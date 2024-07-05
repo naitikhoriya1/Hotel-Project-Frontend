@@ -31,7 +31,7 @@ function BookingForm() {
     formD.append("hotellocation", formData.hotellocation);
     formD.append("hotelrent", formData.hotelrent);
     formD.append("hotelimage", formData.hotelimage);
-    const response = await fetch("https://hotel-project-backend.vercel.app//bookingform", {
+    const response = await fetch("https://hotel-project-backend.vercel.app/bookingform", {
       method: "post",
       body: formD,
     });
