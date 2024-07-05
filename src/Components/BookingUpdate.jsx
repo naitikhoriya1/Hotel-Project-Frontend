@@ -10,7 +10,7 @@ export default function BookingUpdate() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        `http://localhost:8000/bookingdatabyid/${param.id}`
+        `https://hotel-project-backend.vercel.app/bookingdatabyid/${param.id}`
       );
       const jsonResponse = await response.json();
       console.log(jsonResponse);
@@ -40,7 +40,7 @@ export default function BookingUpdate() {
     formD.append("hotelrent", formData.hotelrent);
     formD.append("hotelimage", formData.hotelimage);
     const response = await fetch(
-      `http://localhost:8000/bookingdataedit/${param.id}`,
+      `https://hotel-project-backend.vercel.app/bookingdataedit/${param.id}`,
       {
         method: "PUT",
         body: formD,
