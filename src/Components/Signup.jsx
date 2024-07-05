@@ -16,7 +16,7 @@ function Signup() {
     e.preventDefault();
     console.log(formData);
     //api
-    const response = await fetch("http://localhost:8000/signup", {
+    const response = await fetch("https://hotel-project-backend.vercel.app/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -141,7 +141,7 @@ function Signup() {
               <p className="mt-10 text-center text-sm text-gray-500">
                 Not a member?
                 <a
-                  href="http://localhost:5173/signin"
+                  href="https://hotel-project-backend.vercel.app/signin"
                   className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
                 >
                   Sign in
