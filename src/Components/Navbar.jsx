@@ -48,10 +48,10 @@ function Navbar() {
             </div>
           ) : (
             <div className="hidden md:flex space-x-4">
-              <Link to="http://localhost:5173/signup" className="text-white">
+              <Link to="https://hotel-project-backend.vercel.app/signup" className="text-white">
                 Signup
               </Link>
-              <Link to="http://localhost:5173/signin" className="text-white">
+              <Link to="https://hotel-project-backend.vercel.app/signin" className="text-white">
                 Login
               </Link>
             </div>
@@ -100,10 +100,10 @@ function Navbar() {
               </>
             ) : (
               <>
-                <a href="http://localhost:5173/signup" className="text-white">
+                <a href="https://hotel-project-backend.vercel.app/signup" className="text-white">
                   Signup
                 </a>
-                <a href="http://localhost:5173/signin" className="text-white">
+                <a href="https://hotel-project-backend.vercel.app/signin" className="text-white">
                   Signin
                 </a>
               </>
