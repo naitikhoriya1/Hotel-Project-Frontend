@@ -5,7 +5,7 @@ export default function Card() {
   useEffect(() => {
     const fetchData = async () => {
       // console.log(formData);
-      const response = await fetch("http://localhost:8000/bookingdata");
+      const response = await fetch("https://hotel-project-backend.vercel.app/bookingdata");
       const jsonresponse = await response.json();
       // console.log(jsonresponse);
       setFormData(jsonresponse);
